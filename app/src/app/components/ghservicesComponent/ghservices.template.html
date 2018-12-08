@@ -1,0 +1,27 @@
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+  <div fxLayout="column wrap" style="background-image:url(https://i.ibb.co/4Z2bc9K/hotel3.jpg);" fxLayoutAlign="start stretch" fxShow="true" fxHide="false">
+    <h1 style="color: white; text-align:center; font-size: 50px;">Need something fixed?</h1>
+    <p style="color: black; text-align:center;"></p>
+  </div>
+  <div fxLayout="column wrap" fxLayoutAlign="start stretch" fxShow="true" fxHide="false" ngClass.xs="cardxs" ngClass.gt-xs="card">
+    <div fxLayout="column wrap" fxLayoutAlign="center none" fxShow="true" fxHide="false">
+      <h2 style="color:red; text-align:center;">Guesthouse Services</h2>
+      <p>Fields marked with * are required?</p>
+      <mat-form-field><textarea matInput="" placeholder="What is the problem?" required></textarea></mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="Guesthouse" required>
+          <mat-option *ngFor="let option of options" [value]="option">{{option}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field><input matInput="" placeholder="Unit number" required></mat-form-field>
+      <mat-form-field><input matInput="" placeholder="When would you like the problem resolved?" [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix="" [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker=""></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field><input matInput="" placeholder="Anything else you would like us to know?" required></mat-form-field>
+      <mat-form-field><input matInput="" placeholder="Enter your name?" required></mat-form-field>
+      <mat-form-field><input matInput="" placeholder="Whatsapp number:" required></mat-form-field>
+      <div fxLayout="column wrap" fxLayoutAlign="center center" fxShow="true" fxHide="false"><button mat-raised-button="" style="background-color:red; color:white; margin-bottom: 1em;">Submit</button></div>
+    </div>
+  </div>
+</div>
